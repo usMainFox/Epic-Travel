@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>О компании</title>
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <!-- media запросы -->
+   <link rel="stylesheet" href="./css/media-tablet.css">
+   <link rel="stylesheet" href="./css/media-mobile.css">
+    <!-- Подключаем иконки -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon/favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/favicon/apple-touch-icon.png"
+    />
+  </head>
+  <body class="stiky-footer">
+    <!-- Шапка сайта  -->
+    <header class="header header-bg" id="header">
+      <!-- container -->
+      <div class="container">
+        <nav class="nav">
+          <a href="index.html">
+            <img src="./img/logo/logo.svg" alt="Epic Travel" />
+          </a>
+          <ul class="nav-list">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="tours.html">Туры</a></li>
+            <li><a href="bout.html" class="activ">О компании</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+          </ul>
+       <!-- Кнопка для меню мобилной версии -->
+          <button class="btn-nav" id="btn-nav" type="button">
+            <img src="./img/nav-open-svg/NAV_OPEN.svg" id="img-btn-open" alt="open_nav">
+          </button>
+        </nav>
+      </div>
+    </header>
+     <!-- Блог навигации для мобильного устройства -->
+    <section class="mobile-nav" id="mobile-nav">
+      <h2 class="visually-hidden">Навигация</h2>
+          <ul class="mobail-nav-list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="tours.html">Туры</a></li>
+          <li><a href="bout.html">О компании</a></li>
+          <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </section>
+    <!-- main -->
+    <main class="inner-page">
+      <!-- Контейер для выравнивания контента и удержании ширены блока -->
+      <div class="container container-small">
+        <!-- Блок для отступа заголовка -->
+        <div class="inner-page-title-wrapper">
+          <h1 class="title-1 text-center">О компании</h1>
+        </div>
+        <!-- Контент о компании -->
+         <div class="article-content">
+
+          <p>
+            ЭпикТрэвел - это ведущее агентство путешествий, стремящееся преобразить ваши отпуска в незабвенные приключения. Наша миссия заключается в том, чтобы предоставить клиентам не просто отдых, но истинные впечатления, заполняющие каждое путешествие смыслом и радостью. Мы гордимся тем, что создаем маршруты, которые не только озаряют карту мира, но и оставляют след в вашем сердце.
+          </p>
+
+          <!-- Обернули картинку в блок,для стилизации -->
+
+          <div class="article-img">
+
+            <picture>
+
+              <source srcset="./img/about-media-img/about-mobile.jpg" media="(max-width:767px)">
+              <source srcset="./img/about-media-img/about-tablet.jpg" media="(max-width:1199px)">
+
+              <img src="./img/about-page/about.jpg" alt="Река">
+
+            </picture>
+
+          </div>
+
+          <p>
+            С ЭпикТрэвел вы становитесь частью сообщества путешественников, ценящих красоту разнообразия и открывающих для себя новые горизонты. Наша команда профессионалов заботится о каждой детали вашего путешествия, чтобы вы могли просто наслаждаться каждым моментом, зная, что мы позаботились обо всем.
+          </p>
+
+          <p>
+            Исследуйте мир с ЭпикТрэвел – вашим надежным партнером в создании незабываемых воспоминаний. Путешествуйте с нами, ведь для нас каждый клиент – не просто пассажир, а участник уникального путешествия, ожидающего своего следующего эпического открытия.
+          </p>
+
+         </div>
+
+      </div>
+    </main>
+    <!-- Подвал footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-copy">
+            <p>2024 © ЭпикТрэвел. <br class="desctop-only">Все права защищены</p>
+          </div>
+          <address class="footer-contact">
+            <a href="tel:+79054561234" class="footer-phon">+7 (905) 456-12-34</a
+            ><br />
+            <a href="mailto:info@epictravel.ru" class="footer-email"
+              >info@epictravel.ru</a
+            ><br />
+            <p class="footer-adress">
+              г. Москва, Рязанский проспект 54, офис 112
+            </p>
+          </address>
+        </div>
+      </div>
+    </footer>
+    <!-- Скрипт для кнопки nav mobail -->
+    <script src="./script/main.js"></script>
+  </body>
+</html>

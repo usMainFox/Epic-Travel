@@ -1,0 +1,644 @@
+/* Подключенные шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+/* Задаем шрифты всему докменту */
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+}
+/* Зададим стиль ссылки по умолчанию */
+a{
+  color:#81B4BD;
+  text-decoration: underline;
+}
+
+/* Задаем для body  flex свойства для прижатия подвала к низу страницы stiky-footer */
+
+.stiky-footer{
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Режим отладки */
+.none {
+  display: none !important;
+}
+
+.desctop-only{
+  display: block;
+}
+
+/* Контенер */
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container.container-small{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* Шапка сайта */
+
+.header {
+  position: relative;
+  z-index: 19;
+  padding: 40px 0 40px 0;
+}
+
+.header-bg{
+  background-color:#F6F6F6;
+}
+
+.header-mobile-bg{
+  background-color: #ffffff;
+}
+
+/* Навигация сайта */
+
+.logo-hring{
+
+  flex-shrink: 0;
+
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-list li a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+}
+
+.nav-list li a.activ {
+  color: #81b4bd;
+}
+
+.nav-list li a:hover {
+  color: #00ceb5;
+}
+/* Мобильная навигация */
+.mobile-nav {
+  z-index: 9;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #F6F6F6;
+
+  /* display: flex; */
+  justify-content: center;
+
+  align-items: center;
+
+  /* отключаем меню по умолчанию */
+
+  display: none;
+
+}
+/* Класс для отображения mobail nav */
+.mobile-nav.open{
+  display: flex;
+}
+
+
+.mobail-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+}
+
+.mobail-nav-list a{
+  color: #000;
+}
+
+/* Скрываем кнопку btn-nav */
+
+.btn-nav{
+  display: none;
+  height: 27px;
+}
+
+/* promo */
+
+.promo {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 70px;
+  height: 500px;
+  background-color: #394d42;
+  background: url("../img/promo/promo-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 40px;
+  color: #ffffff;
+}
+
+/* Задаем медиа запрос */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resalition: 192dpi) {
+  .promo {
+    background-image: url("../img/promo/promo-bg@2x.jpg");
+  }
+}
+
+/* promo-text */
+
+.prormo-title {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.prormo-text {
+  font-size: 24px;
+}
+
+/* main content  */
+
+.main-content {
+  /* Почему я так пишу отступы,чтоб привыкнуть , как привыкну буду более сокрашенно писать */
+  padding: 90px 0 90px 0;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+}
+
+.content-row {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+}
+
+.content-row.content-row-revers {
+  flex-direction: row-reverse;
+}
+
+.content-img {
+  flex-shrink: 0;
+
+  border-radius: 40px;
+
+  overflow: hidden;
+}
+
+.content-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.content-text p {
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.content-text a {
+  font-size: 18px;
+  color: #81b4bd;
+  text-decoration: underline;
+}
+
+.title-1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 100%;
+}
+
+.title-2 {
+
+  font-weight: 700;
+  font-size: 28px;
+
+}
+
+.title-3 {
+
+  font-weight: 700;
+  font-size: 20px;
+
+}
+
+.title-1 span {
+  color: #81b4bd;
+}
+
+.text-center{
+  text-align:center;
+}
+
+/* Скрываем стандартный элемент */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.no-scroll{
+  overflow-y: hidden;
+}
+
+/* Страница туров */
+
+.inner-page{
+
+  padding: 90px 0 90px 0;
+  
+}
+
+/* Карточки */
+.cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap:30px;
+  row-gap: 60px;
+}
+
+.inner-page-title-wrapper{
+
+  margin-bottom: 60px;
+}
+
+.card {
+  width: 370px;
+}
+
+.card-img {
+  margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-desc p{
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.card-desc a{
+  color:#81B4BD;
+  text-decoration: underline;
+}
+
+.card-title {
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 800;
+}
+
+/* О компании about */
+
+.article-content p{
+
+  font-size: 18px;
+  line-height: 180%;
+}
+
+.article-content p+p{
+  margin-top: 30px;
+}
+
+.article-img {
+
+  margin: 40px 0 40px 0;
+
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Контакты */
+
+.contacts-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 100px;
+  align-items:flex-start;
+}
+
+/* form */
+
+
+.form-wrapper {
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+
+  border-radius: 10px;
+  width: 600px;
+  
+
+  box-shadow: 0 5px 25px 0 rgba(211, 211, 211, 0.5);
+  background: #fff;
+}
+.title-2 {
+  font-weight: 700;
+  font-size: 28px;
+}
+.form-group {
+
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+
+}
+.title-3 {
+  font-weight: 700;
+  font-size: 20px;
+}
+.inputs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.input {
+
+  width: 100%;
+
+  padding: 14px 20px;
+
+  height: 50px;
+  border: 1px solid #b5dee5;
+  border-radius: 2px;
+
+  background: #eff9fb;
+
+  color: #36727d;
+
+
+}
+
+.input.input-50{
+  flex: 1;
+}
+
+.input::placeholder{
+  color: #9eccd4;
+}
+
+/* radio-list */
+
+.radio-list, .checkbox-list{
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.radio-list li label,.checkbox-list li label{
+  display: flex;
+  gap: 15px;
+  align-items:center;
+
+}
+
+.radio-list label input,.checkbox-list label input{
+  flex-shrink: 0;
+}
+
+/* fake radio */
+
+.real-radio{
+
+}
+
+.fake-radio{
+  position: relative;
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid #B5DEE5;
+
+  border-radius: 20px;
+
+  background-color:#EFF9FB;
+}
+
+/* fake-radio-fill */
+
+
+
+.real-radio:checked +.fake-radio::after{
+
+ transform: translate(-50%,-50%) scale(100%);
+
+}
+
+.fake-radio::after{
+
+  content:"";
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 12px;
+
+  position: absolute;
+
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%) scale(0%);
+
+  background-color:#37B6CC;
+
+  /* transform: scale(0%); */
+
+  transition: all 0.2s ease-in;
+
+
+}
+
+/* fake-checbox */
+
+.checkbox-rel {
+}
+
+.fake-checbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color:#EFF9FB;
+  border: 1px solid #B5DEE5;
+}
+
+.fake-checbox::after {
+
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(0%);
+
+  width: 16px;
+  height: 13px;
+
+  /* background-image:url("../img/checkbox-icon-svg/tick.svg"); */
+  /* Я то-же оставлю */
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='13' viewBox='0 0 16 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.06055 5.06067L7.06055 11.0607M4.93923 11.0607L14.9392 1.06067' stroke='%2337B6CC' stroke-width='3' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.checkbox-rel:checked +.fake-checbox::after {
+
+   transform: translate(-50%,-50%) scale(100%);
+   transition: all 0.2s ease-in;
+
+}
+
+/* submit-button */
+
+.submit-button{
+
+  align-self: flex-start;
+
+  padding: 12px 36px;
+
+  border-radius: 6px;
+  /* width: 235px; */
+  height: 50px;
+
+  box-shadow: 0 8px 20px 0 rgba(129, 180, 189, 0.35);
+  background: #81b4bd;
+
+  font-weight: 800;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
+
+  transition: all 0.2s ease-in;
+
+}
+
+.submit-button:hover{
+  opacity: 0.9;
+}
+
+.submit-button:active{
+  opacity: 1;
+  background: #5a919b;
+}
+
+/* address */
+
+.address-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.address-item {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title-2 {
+}
+.address-list {
+
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+}
+
+.address-list li{
+  display: flex;
+  gap: 10px;
+}
+
+.map-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+/* Подвал footer */
+
+.footer {
+
+  margin-top: auto;
+  padding: 60px 0 60px 0;
+
+  background-color: #111111;
+  /* height: 208px; */
+
+  color: #ffffff;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-copy {
+  font-size: 14px;
+  line-height: 180%;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-contact {
+  text-align: right;
+}
+
+.footer-phon {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+.footer-email {
+  font-size: 14px;
+  color: #00bda6;
+  line-height: 150%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.footer-adress {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 150%;
+}
+
+
+
