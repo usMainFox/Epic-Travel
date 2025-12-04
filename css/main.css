@@ -492,6 +492,7 @@ a{
   height: 20px;
   background-color:#EFF9FB;
   border: 1px solid #B5DEE5;
+  flex-shrink: 0;
 }
 
 .fake-checbox::after {
