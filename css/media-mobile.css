@@ -104,5 +104,33 @@
   margin: 20px 0;
 
 }
+
+/* contact */
+
+.address-wrapper {
+  gap: 20px;
+
+  font-size: 14px;
+  
+}
+
+.form-wrapper{
+  padding: 20px 15px;
+  font-size: 14px;
+}
+
+.title-2{
+  font-size: 22px;
+}
+
+.title-3{
+  font-size: 18px;
+}
+
+/* span.fake-checbox{
+  width: 20px;
+  height: 20px;
+} */
+
   
 }
