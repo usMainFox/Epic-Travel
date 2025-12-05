@@ -132,5 +132,12 @@
   height: 20px;
 } */
 
+
+/* inputs */
+
+.inputs-wrapper{
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
   
 }
